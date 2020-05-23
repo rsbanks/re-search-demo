@@ -1,0 +1,159 @@
+  body {
+    background-color: #DEDEDE;
+  }
+  
+.header {
+  position: fixed;
+  z-index: 999;
+  background-color: #F5F5F5;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  top: 0;  
+  width: 100%;
+  height: calc(20px + 3vw);
+}
+
+.header .title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: calc(18px + 2vw);
+
+  margin-left: 1%;
+
+  color: #000000;
+}
+
+.header .logout {  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: calc(11px + 1vw);
+  
+
+  float: right;
+  margin: 1%;
+  
+  color: #000000;  
+}
+
+  
+  .heading {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+  
+    padding: 1%;
+  
+    color: #000000;
+  }
+
+  .searchInputForm {
+    width: 40%;
+    height: 5vh;
+    margin-left: 1%;
+  }
+  .netidInput {
+    width: 48%;
+    height: 4.5vh;
+    outline: none;
+    border: none;
+    border-radius: 6px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: lighter;
+  }
+  
+  .searchButton {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 1.3vw;
+    text-align: center;
+
+    width: 48%;
+    height: 5vh;
+    
+    color: #FFFFFF;
+
+    background-color: #000000;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+  }
+
+  .editButton {
+    width: 20%;
+    margin: 1%;
+    height: 6vh;
+  }
+
+  .downloadButton {
+    border: none;
+    background-color: inherit;
+    background: transparent;
+    font-weight: bold;
+    border-radius: 5px;
+    outline: none;
+    text-decoration: underline;
+  }
+
+  .downloadButton:hover {
+    background-color: #FFFFFF;
+    transform: scale(1.04);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    text-decoration: none;
+  }
+
+  .profInfoTable {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 1vw;
+
+    margin-left: 1%;
+  }
+
+  .label {
+    font-size: 1.3vw;
+    text-align: left;
+  }
+
+  .alert {
+    width: 75%;
+    margin-top: 1%;
+    margin-left:1%;
+  }
+
+  .profResult {
+    margin-top: 1%;
+  }
+
+  .right-panel {
+    padding: 2%
+  }
+
+  #removeIcon {
+    float: right;
+    position: absolute;
+    color: #CC0C0C;
+    right: 10px;
+    top:10px;
+    cursor: pointer;
+  }
+
+  #saveForm {
+    padding-top: 1%;
+    padding-bottom: 1%;
+  }
+
+  #editOtherForm {
+    padding-top: 2%;
+    padding-bottom: 2%;
+  }
+
+  .profImageDisplay {
+    padding: 1%;
+    width: 200px;
+    height: 250px;
+  }

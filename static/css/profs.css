@@ -1,0 +1,503 @@
+@import url('https://fonts.googleapis.com/icon?family=Material+Icons');
+
+body{
+  background-color: #DEDEDE;
+}
+
+.header {
+  position: fixed;
+  z-index: 999;
+  background-color: #F5F5F5;
+  box-shadow: 0px 5px 10px rgba(0, 0, 0, 0.25);
+  top: 0;  
+  width: 100%;
+  height: 8%;
+}
+
+.header .title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: calc(18px + 2vw);
+
+  margin-left: 1%;
+
+  color: #000000;
+}
+
+.header .logout {  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: calc(11px + 1vw);
+
+  float: right;
+  margin: 1%;
+  
+  color: #000000;  
+}
+
+.header .about {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: calc(11px + 1vw);
+
+  float: right;
+  margin: 1%;
+  
+  color: #000000; 
+}
+
+.heading-div {
+  width: 100%;
+  height: 5%;
+  text-align: left;
+}
+
+.heading {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  margin-left: 2%;
+  margin-top: 5%;
+
+  width: 80%;
+  float: right;
+
+  color: #000000;
+}
+
+.no-search-results {
+  font-family: Montserrat;
+  font-style: oblique;
+  margin-left: 1%;
+}
+
+.row {
+  width: auto;
+  margin-left: 1%;
+  margin-right: 1%;
+  height: auto;
+  margin-bottom: 2vh;
+  overflow: hidden;
+
+  background: #AEAEAE;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+.row:hover {
+  background-color: #B5B5B5;
+}
+
+
+.prof-image{
+  width: 15%;
+  max-width: 100px;
+  height: 80%;
+  float: left;
+  margin-left: 1%;
+  margin-top: 1%;
+}
+
+img{
+  max-width: 100%;
+  max-height: 100%;
+}
+
+.icon {
+  max-width: 25px;
+  max-height: 25px;
+  margin-top: 0.3%;
+  margin-right: 0.4%;
+  opacity: 0.5;
+}
+
+.icon-button {
+  max-width: 35px;
+  max-height: 35px;
+  opacity: 0.5;
+}
+
+.icon:hover {
+  opacity: 1;
+}
+
+.icon-button:hover {
+  opacity: 1;
+}
+
+.button {
+  background-color: Transparent;
+  background-repeat: no-repeat;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  outline: none;
+}
+
+.button-div {
+  float: right;
+  position: relative;
+  right: 1%;
+  margin-top: 1.5%;
+  margin-right: 1%;
+  margin-left: 1%;
+}
+
+.prof-info {
+  width: 73.5%;
+  height: 100%;
+  margin-top: 0.3%;
+  margin-left: 1%;
+  float: left;
+}
+
+.prof-name {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bolder;
+
+  margin-top: 0.5%;
+  margin-bottom: 0;
+
+  color: #000000;
+}
+
+.prof-title {  
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  margin-top: 1%;
+  
+  color: #000000;
+}
+
+.prof-more-info {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  margin: 0.1%;
+
+  
+  color: #000000;
+}
+
+.prof-email-website {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  margin: 0.1%;
+
+  
+  color: #000000;
+}
+
+.panel {
+  width: 98%;
+  margin-left: 1%;
+  margin-right: 1%;
+
+  background: #FAFAFA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease-out;
+}
+
+.previous-papers {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+
+  margin-bottom: 2%;
+}
+
+.sub-title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bolder;
+
+  font-size: 30px;
+}
+
+.sub-info {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+
+  line-height:1.6em
+}
+
+.info-left {
+  width: 50%;
+  float: left;
+
+  margin-left: 2%;
+  margin-bottom: 1%;
+  margin-top: 1%;
+}
+
+.info-right {
+  width: 35%;
+  float: right;
+  height: 100%;
+  margin-top: 1%;
+}
+
+.collapsible {
+  cursor: pointer;
+}
+
+.searchForm {
+  margin-bottom: 1%;
+  height: 6vh;
+
+  width: 80%;
+  float: right;
+}
+
+.form-input-div {
+  width: 98%;
+  margin-top: 2%;
+  margin-left: 0.7%;
+  margin-right: 1.3%;
+  height: 90%;
+
+  background: #FFFFFF;
+  box-shadow: 0px 5px 20px rgba(0, 0, 0, 0.25);
+  outline: none;
+  border-radius: 6px;
+}
+
+.form-input {
+  width: 100%;
+  height: 90%;
+  outline: none;
+  border: none;
+  border-radius: 6px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: lighter;
+
+  margin-bottom: 1%;
+}
+
+.form-row {
+  width: 100%;
+  height: 6vh;
+  display: inline-flex;
+}
+
+.tagForm {
+  margin-top: 1%;
+  margin-left: 1%;
+  margin-right: 1%;
+  height: 6vh;
+  display: inline-flex;
+
+  width: 78.5%;
+  float: right;
+}
+
+.tag-input-div {
+  margin-left: 1%;
+  margin-right: 1%;
+  margin-bottom: 0.5%;
+
+  width: 78.5%;
+  float: right;
+  align-items: center;
+}
+
+.tag {
+  height: 4.5vh;
+
+  /* height: 3vh; */
+  align-self: center;
+  margin-top: 0.5%;
+  margin-right: 0.3%;
+  padding: 0.3%;
+  border: 1.5px solid #9D9D9D;
+  display: flex;
+  display: inline-block;
+  align-items: center;
+
+  outline: none;
+  border-radius: 4px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+
+  cursor: default;
+}
+
+.tag i {
+  font-size: 1.5vw;
+  float: right;
+}
+
+::placeholder {
+  opacity: 0.6;
+  font-family: 'Open Sans', sans-serif;
+  font-style: oblique;
+}
+
+.expand-div {
+  float: right;
+  width: 2.5%;
+  margin-top: 0.5%;
+  margin-right: 0.5%;
+  height: 30%;
+
+  opacity: 0.7;
+}
+
+.expand-div:hover {
+  transform: scale(1.1);
+}
+
+.expanded-info {
+  width: 98%;
+  margin-left: 1%;
+  margin-right: 1%;
+  height: 75vh;
+  margin-bottom: 3vh;
+
+  background: #FAFAFA;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+}
+
+.add-prof-selection {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+
+  margin-top: 1.5%;
+  width: 10%;
+  float: top;
+  cursor: pointer;
+}
+
+.add-prof-selection:hover {
+  text-decoration: underline;
+}
+
+.results {
+  float: right;
+  width: 80%;
+  height: 100%;
+}
+
+.profPreferencesDiv {
+  float: left;
+  width: 19%;
+  height: 89%;
+
+  background: #F9F9F9;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  border-radius: 6px;
+  position: fixed;
+  padding: 1%;
+  top: 10%;
+  left: 0;
+  right: 0;
+
+  margin-left: 0.5%;
+}
+
+.prof_preference {
+  height: 4.5vh;
+
+  width: 100%;
+  align-self: center;
+  margin-top: 0.5%;
+  margin-right: 0.3%;
+  margin-left: 0.3%;
+  margin-bottom: 2%;
+  padding: 0.3%;
+  border: 1.5px solid #9D9D9D;
+  display: flex;
+  display: inline-block;
+  align-items: center;
+  overflow: hidden;
+
+  outline: none;
+  border-radius: 4px;
+
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  text-align: center;
+
+  cursor: move;
+}
+
+.prof_preference.dragging{
+  transform: scale(1.1);
+  opacity: 50%;
+}
+
+#closeIconProfPrefence {
+  float: right;
+  opacity: 50%;
+  cursor: pointer;
+}
+
+#closeIconProfPrefence:hover {
+  opacity: 100%;
+}
+
+.submit_preferences_form {
+  text-align: center;
+  height: 5.5vh;
+  background-color: #000000;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+
+  position: fixed;
+  width: 17%;
+  bottom: 3%;
+}
+
+.submitPreferencesButton {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  text-align: center;
+
+  width: 100%;
+  height: 5.5vh;
+  overflow: hidden;
+  
+  color: #FFFFFF;
+
+  background-color: #000000;
+  box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+  border-radius: 5px;
+  border: none;
+  outline: none;
+}
+
+#profLimitAlert {
+  position: fixed;
+  width: 17%;
+  bottom: 10%;
+}
+
+#submissionSuccessAlert {
+  position: fixed;
+  z-index: 999;
+  width: 74%;
+  align-self: center;
+}
+
+.mobileAlertDiv {
+  display: none
+}

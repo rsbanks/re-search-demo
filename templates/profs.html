@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+
+      <div class="mobileAlertDiv">
+        <div class="alert alert-info alert-dismissible fade show" id="mobileAlert" role="alert">
+          Hi {{username}}! Re-Search is optimized for desktops/ laptops. Please log in on a
+          device with a bigger screen to get the full experience.
+          <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+            <span aria-hidden="true">&times;</span>
+          </button>
+        </div>
+      </div>
+
+        <nav class="header navbar navbar-expand-lg navbar-light">
+          <a class="navbar-brand h1 title" href="{{url_for('search')}}" style="text-decoration:none">Re-Search</a>
+            <ul class="navbar-nav mr-auto">
+            </ul>
+            <a class="h2 about" href="{{url_for('about')}}" style="text-decoration:none">About</a>
+            <a class="h2 logout" href="/" style="text-decoration:none">Log Out</a>
+        </nav>
+
+        <div class="heading-div">
+          <p class="h4 heading">Welcome, {{ username }}! Search for an advisor below</p>
+        </div>
+
+        <form class="searchForm" id="searchInput">
+            <div class="form-input-div">
+              <input type="text" class="form-input" placeholder="Professor's Name, netid" id="nameNetid" name="nameNetid">
+            </div>
+        </form>
+
+        <form class = "tagForm" id="tagInput" onsubmit="return false">
+            <input type="text" class="form-input" placeholder="Add Research Area and press Enter" id="newTagInput">
+        </form>
+        <div class="tag-input-div" id="tag-input-div"></div>
+
+        <div class="results" id="results"></div>
+
+        <div class="profPreferencesDiv" id="profPreferencesDiv">
+          <h5>Advisor Preferences</h5>
+          <p>For ORFE Senior Projects and Theses<br><small>Higher is more preferred</small></p><hr>
+            <form class="submit_preferences_form" id="submit_preferences_form">
+              <input class="submitPreferencesButton" value="Go to Submission Form" type="submit">
+            </form>
+            <div class="alert alert-info collapse" role="alert" id="profLimitAlert">
+              Only the <strong>top 4</strong> preferences are considered.
+              <button type="button" class="close" data-dismiss="alert" aria-label="Close" id="closeProfLimitAlert">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+        </div>
+
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+
+
+        <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+        <link href="https://fonts.googleapis.com/icon?family=Material+Icons"rel="stylesheet">
+        <link rel="stylesheet"  media="screen and (min-device-width: 800px)" href="{{url_for('static', filename='css/profs.css')}}">
+        <link rel="stylesheet"  media="screen and (max-device-width: 800px)" href="{{url_for('static', filename='css/profsMobile.css')}}">
+        <script src="static/js/profPreferences.js"></script>
+        <script src="static/js/profs.js"></script>
+    </body>
+</html>

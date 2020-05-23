@@ -1,0 +1,87 @@
+.body {
+    background-color: #C9C9C9;
+}
+
+.header {
+    width: 100%;
+}
+
+.header .title {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+
+    margin-left: 1vw;
+
+    color: #000000;
+}
+
+.header .login {
+    float: right;
+    margin-right: 2vw;
+    margin-top: 2vh;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    /* font-size: calc(11px + 2vw); */
+    
+    color: #000000;  
+}
+
+.header .about {
+    float: right;
+    margin-right: 2vw;
+    margin-top: 2vh;
+    
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    /* font-size: calc(11px + 2vw); */
+    
+    color: #000000;
+}
+
+.intro {
+    margin-top: 15%;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    /* font-size: calc(16px + 1vw); */
+    
+    color: #000000;  
+}
+
+.button-div {
+    width: 30%;
+    margin-left: 35.5%;
+    margin-right: 35.5%;
+}
+
+.login-button {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: calc(11px + 1vw);
+    text-align: center;
+
+    width: 50%;
+
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.25);
+    border-radius: 5px;
+    border: none;
+    outline: none;
+}
+
+.student-login-btn {
+    margin-top: 15%;
+}
+
+.admin-login-btn {
+    font-weight: bolder;
+    margin-top: 1%;
+}
+
+.login-button:hover {
+    transform: scale(1.04);
+}

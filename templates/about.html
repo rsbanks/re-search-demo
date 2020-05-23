@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="{{url_for('static', filename='css/about.css')}}">
+        <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&display=swap" rel="stylesheet">
+
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body class="body">
+        <div class="header">
+            <a href="{{url_for('index')}}" class="title"  style="text-decoration:none">Re-Search</a>
+            <a href="{{url_for('search')}}" class="login"  style="text-decoration:none">Login</a>
+        </div>
+
+        <div class="intro">
+            <p> What is Re-Search?</p>
+        </div>
+        <div class="about">
+            <p class="pillow">Re-Search is a COS 333 project made for ORFE students to find potential research advisors that match their interests.</p>
+            <p class="pillow">It is currently being developed for this semester by <a href=mailto:kipkorir@princeton.edu class ="name">Allan Kipkorir</a>, 
+                <a href=mailto:rsbanks@princeton.edu class ="name">Rebecca Banks</a>, <a href=mailto:blhuynh@princeton.edu class ="name">Brandon Huynh</a>, and 
+                <a href=mailto:avv2@princeton.edu class ="name">Alex Valtchanov</a>.</p>
+            <p class="pillow">Please reach out to us if you have any feedback for the website!</p>
+        </div>
+
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    </body>
+</html>
