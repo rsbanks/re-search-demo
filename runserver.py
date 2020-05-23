@@ -706,11 +706,9 @@ def submitPreferences():
     # insert data into 'preferences database'
     profPrefDB = profPreferencesDB()
     error_statement = profPrefDB.connect()
-    # added for demo version
-    profs, error_statement2 = getProfs('netid ILIKE %s',[""])
     if error_statement == '' :
     	# generate random username for demo
-        report = profPrefDB.createProfPreference(["username"+random.randint(0,5*profs.len()), courseSelection,
+        report = profPrefDB.createProfPreference(["username"+random.randint(0,100), courseSelection,
             advisor1, advisor1Comments, advisor2, advisor2Comments, advisor3, 
             advisor3Comments, advisor4, advisor4Comments, submittedTime, completedTime])
         profPrefDB.disconnect()
