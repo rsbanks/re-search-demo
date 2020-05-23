@@ -243,6 +243,7 @@ def admin():
 
     # check if user is an admin
     # netID = CASClient().authenticate().rstrip('\n')
+    netID = "username"
 
     deniedAccess = ''
 
@@ -261,7 +262,7 @@ def admin():
     # if result == None:
     #     deniedAccess = 'deniedAccess'
 
-    html = render_template('templates/admin.html', username="username", deniedAccess=deniedAccess)
+    html = render_template('templates/admin.html', username=netID, deniedAccess=deniedAccess)
     response = make_response(html)
     return response
 
