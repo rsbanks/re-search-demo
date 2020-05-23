@@ -707,7 +707,7 @@ def submitPreferences():
     profPrefDB = profPreferencesDB()
     error_statement = profPrefDB.connect()
     # added for demo version
-    profs, error_statement2 = getProfs("")
+    profs, error_statement2 = getProfs("",[])
     if error_statement == '' :
     	# generate random username for demo
         report = profPrefDB.createProfPreference(["username"+random.randint(0,5*profs.len()), courseSelection,
