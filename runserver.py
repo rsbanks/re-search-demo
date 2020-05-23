@@ -708,7 +708,7 @@ def submitPreferences():
     error_statement = profPrefDB.connect()
     # added for demo version
     profs, error_statement2 = getProfs('netid ILIKE %s',[""])
-    username = "username"+random.randint(0,5*profs.len())
+    username = "username"#+random.randint(0,5*profs.len())
     print(username)
     if error_statement == '' :
     	# generate random username for demo
