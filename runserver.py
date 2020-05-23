@@ -16,6 +16,7 @@ from PIL import Image
 import csv
 from match import optimizePreferences
 from adminsDB import adminsDB
+import random
 
 
 app = Flask(__name__, template_folder='.')
@@ -709,7 +710,7 @@ def submitPreferences():
     profs, error_statement2 = getProfs()
     if error_statement == '' :
     	# generate random username for demo
-        report = profPrefDB.createProfPreference(["username", courseSelection,
+        report = profPrefDB.createProfPreference(["username"+random.randint(0,5*profs.len()), courseSelection,
             advisor1, advisor1Comments, advisor2, advisor2Comments, advisor3, 
             advisor3Comments, advisor4, advisor4Comments, submittedTime, completedTime])
         profPrefDB.disconnect()
