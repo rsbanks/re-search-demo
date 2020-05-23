@@ -709,7 +709,7 @@ def submitPreferences():
     profs, error_statement2 = getProfs()
     if error_statement == '' :
     	# generate random username for demo
-        report = profPrefDB.createProfPreference(["username"+randint(0,5*profs.len()), courseSelection,
+        report = profPrefDB.createProfPreference(["username", courseSelection,
             advisor1, advisor1Comments, advisor2, advisor2Comments, advisor3, 
             advisor3Comments, advisor4, advisor4Comments, submittedTime, completedTime])
         profPrefDB.disconnect()
