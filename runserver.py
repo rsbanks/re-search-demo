@@ -16,6 +16,7 @@ from PIL import Image
 import csv
 from match import optimizePreferences
 from adminsDB import adminsDB
+import random
 
 
 app = Flask(__name__, template_folder='.')
@@ -83,9 +84,9 @@ def index():
 @app.route('/search')
 def search():
 
-    username = CASClient().authenticate()
+    # username = CASClient().authenticate()
 
-    html = render_template('templates/profs.html', username=username)
+    html = render_template('templates/profs.html', username="username")
     response = make_response(html)
     return response
 
@@ -99,7 +100,7 @@ def about():
 @app.route('/searchResults', methods=['GET'])
 def searchResults():   
 
-    username = CASClient().authenticate()
+    # username = CASClient().authenticate()
 
     search_criteria, input_arguments = getSearchCriteria()
 
@@ -242,7 +243,8 @@ def getSearchCriteria():
 def admin():
 
     # check if user is an admin
-    netID = CASClient().authenticate().rstrip('\n')
+    # netID = CASClient().authenticate().rstrip('\n')
+    netID = "username"
 
     deniedAccess = ''
 
@@ -258,8 +260,8 @@ def admin():
     cur.close()
     adminsDB_.disconnect()
 
-    if result == None:
-        deniedAccess = 'deniedAccess'
+    # if result == None:
+    #     deniedAccess = 'deniedAccess'
 
     html = render_template('templates/admin.html', username=netID, deniedAccess=deniedAccess)
     response = make_response(html)
@@ -628,7 +630,7 @@ def deleteprof():
 @app.route('/profPreferences', methods=["GET"])
 def profPreferences():
 
-    username = CASClient().authenticate()
+    # username = CASClient().authenticate()
 
     first = request.args.get('first')
     if first == "":
@@ -662,7 +664,7 @@ def profPreferences():
 @app.route('/submitPreferences', methods=["GET"])
 def submitPreferences():
 
-    username = CASClient().authenticate().rstrip('\n')
+    # username = CASClient().authenticate().rstrip('\n')
 
     advisor1 = request.args.get('Advisor1')
     if advisor1 == None:
@@ -704,7 +706,12 @@ def submitPreferences():
     # insert data into 'preferences database'
     profPrefDB = profPreferencesDB()
     error_statement = profPrefDB.connect()
+    # added for demo version
+    profs, error_statement2 = getProfs('netid ILIKE %s',[""])
+    username = "username"+datetime.now().strftime("%Y%m%d%H%M%S")
+    print(username)
     if error_statement == '' :
+    	# generate random username for demo
         report = profPrefDB.createProfPreference([username, courseSelection,
             advisor1, advisor1Comments, advisor2, advisor2Comments, advisor3, 
             advisor3Comments, advisor4, advisor4Comments, submittedTime, completedTime])
